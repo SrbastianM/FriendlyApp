@@ -10,3 +10,4 @@
     <link rel="stylesheet" href="assets/StyleIndex.css">
     <title>Login page</title>
 </head>
+<body>
