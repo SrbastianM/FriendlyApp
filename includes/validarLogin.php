@@ -11,7 +11,7 @@ $contraseña = $_POST["Contraseña"];
 
     if (mysqli_num_rows($result) > 0) {
     //se para en row y pide que imprima de la primera fila de cada campo
-    header("location:index.php");
+    header("location:UI.php");
     } 
 
     mysqli_close($conn);

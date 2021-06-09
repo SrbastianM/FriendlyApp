@@ -1,11 +1,12 @@
 <?php include("includes/db.php");
 include("includes/header.php");
 include("includes/validarLogin.php");
+include("includes/register.php")
 ?>
 
 
 
-<!-- <div class="sidenav">
+<div class="sidenav">
         <div class="login-main-text">
             <h2>Friendly App<br> Login Page</h2>
             <p>Login or register from here to access.</p>
@@ -16,7 +17,7 @@ include("includes/validarLogin.php");
              <div class="login-form">
                 <div> -->
 
-                    <form action="#" method="POST">
+                    <form action="includes/UI.php" method="POST">
                         <div class="form-group">
                             <label>User Name</label>
                             <input name ="Usuario" type=" text" class="form-control" placeholder="User Name">
@@ -26,7 +27,7 @@ include("includes/validarLogin.php");
                             <input name = "Contraseña" type="password" class="form-control" placeholder="Password">
                         </div>
                             <button id = "login-button" type="submit" class="btn btn-black">Login</button>
-                            <button id ="sign-button" type="submit" class="btn btn-secondary">Register</button>
+                            <button action ="register.php"id ="sign-button" type="submit" class="btn btn-secondary">Register</button>
                     
                     </form>
                 </div>
