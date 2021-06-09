@@ -15,8 +15,7 @@ include("includes/register.php")
     <div class="main">
         <div class="col-md-6 col-sm-12">
              <div class="login-form">
-                <div> -->
-
+                <div> 
                     <form action="includes/UI.php" method="POST">
                         <div class="form-group">
                             <label>User Name</label>
@@ -27,8 +26,7 @@ include("includes/register.php")
                             <input name = "Contraseña" type="password" class="form-control" placeholder="Password">
                         </div>
                             <button id = "login-button" type="submit" class="btn btn-black">Login</button>
-                            <button action ="register.php"id ="sign-button" type="submit" class="btn btn-secondary">Register</button>
-                    
+                            <button action ="includes/register.php"id ="sign-button" type="submit" class="btn btn-secondary">Register</button>
                     </form>
                 </div>
             </div>
