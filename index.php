@@ -5,7 +5,7 @@ include("includes/validarLogin.php");
 
 
 
-<!-- <div class="sidenav">
+<div class="sidenav">
         <div class="login-main-text">
             <h2>Friendly App<br> Login Page</h2>
             <p>Login or register from here to access.</p>

@@ -3,7 +3,7 @@
 
 $register = '';
 // Aquí, va a validar un usuario y lo incriptara
-if(isset($_POST("register"))){
+if(isset(POST("register"))){
     
 }
 
