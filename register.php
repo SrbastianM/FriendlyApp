@@ -3,7 +3,9 @@
 
 $register = '';
 // Aquí, va a validar un usuario y lo incriptara
-if(isset(POST("register"))){
+if(isset($_POST('registro'))){
+
+}
     
 }
 
@@ -18,7 +20,7 @@ if(isset(POST("register"))){
                             <div class="card">
                                     <div class="card-header text-center"> Register</div>
                                     <div class="card-body">
-                                        <form action="register.php" method ='Post'>
+                                        <form action="register.php" method ='POST'>
                                             <div class="form-group row">
                                                 <label for="" class="col-md-4 col-form-label text-md-right"> Full Name </label>
                                                 <div class="col-md-8 ">
