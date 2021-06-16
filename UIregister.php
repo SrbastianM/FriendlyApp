@@ -44,7 +44,7 @@ include("includes/register.php");
                                                 </div>
                                             </div>
                                             <div class="d-grid gap-2">
-                                                <button type="submit" class="btn btn-outline-dark btn-lg btn-sm justify-content-right" name="registeruser" value="register" >
+                                                <button type="submit" class="btn btn-outline-dark btn-lg btn-sm justify-content-right" name="register" value="register User" >
                                                 Register
                                                 </button>
                                                 <a href="index.php"> Login </a>
