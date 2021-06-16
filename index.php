@@ -14,7 +14,7 @@ include("includes/validarLogin.php");
     <div class="main">
         <div class="col-md-6 col-sm-12">
              <div class="login-form">
-                <div> -->
+                <div> 
 
                     <form action="#" method="POST">
                         <div class="form-group">
