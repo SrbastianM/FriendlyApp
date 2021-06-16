@@ -15,17 +15,17 @@ include("includes/validarLogin.php");
         <div class="col-md-6 col-sm-12">
              <div class="login-form">
                 <div> 
-                    <form action="#" method="POST">
+                    <form action="validarLogin.php" method="POST">
                         <div class="form-group">
                             <label>User Name</label>
-                            <input name ="Usuario" type=" text" class="form-control" placeholder="User Name">
+                            <input name ="email" type="text" class="form-control" placeholder="User Name">
                         </div>
                         <div class="form-group">
                             <label>Password</label>
-                            <input name = "Contraseña" type="password" class="form-control" placeholder="Password">
+                            <input name = "password" type="password" class="form-control" placeholder="Password">
                         </div>
                             <button id = "login-button" type="submit" class="btn btn-black">Login</button>
-                            <button action ="includes/UIregister.php"id ="sign-button" type="submit" class="btn btn-secondary">Register</button>
+                            <a href="UIregister.php"> Register</a>
                     </form>
                 </div>
             </div>
