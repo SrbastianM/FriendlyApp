@@ -12,7 +12,7 @@ include("includes/register.php");
                             <div class="card">
                                     <div class="card-header text-center"> Register</div>
                                     <div class="card-body">
-                                        <form action="register.php" method ='POST'>
+                                        <form action="includes/register.php" method ='POST'>
                                             <div class="form-group row">
                                                 <label for="" class="col-md-4 col-form-label text-md-right"> Full Name :</label>
                                                 <div class="col-md-8 ">

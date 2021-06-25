@@ -11,6 +11,6 @@
     <link rel="stylesheet" href="assets/StyleIndex.css">
     <link rel="stylesheet" href="assets/StyleRegister.css">
     <link rel="stylesheet" href="assets/StyleUI.css">
-    <title>Login page</title>
+    <title>Friendly App</title> 
 </head>
 <body>
