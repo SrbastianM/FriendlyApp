@@ -2,6 +2,9 @@
 include("../includes/header.php");
 include("../includes/db.php");
 ?>
+<style>
+
+</style>
 
 <body>
 

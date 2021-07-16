@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="assets/StyleIndex.css">
     <link rel="stylesheet" href="assets/StyleRegister.css">
     <link rel="stylesheet" href="assets/StyleUI.css">
-    <title>Friendly App</title> 
+    <title>Friendly App</title>
 </head>
+
 <body>
