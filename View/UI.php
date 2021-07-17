@@ -1,6 +1,11 @@
 <?php
 include("../includes/header.php");
 include("../includes/db.php");
+
+session_start();
+
+
+
 ?>
 <style>
 
