@@ -54,7 +54,7 @@ include("includes/register.php");
                                 <div class="form-group row">
                                     <label for="" class="col-md-4 col-form-label text-md-right">Citizenship Card :</label>
                                     <div class="col-md-8 ">
-                                        <input type="text" class="form-control" name="citizenshipcard" placeholder="Citizenship Card">
+                                        <input type="number" class="form-control" name="citizenshipcard" placeholder="Citizenship Card">
                                     </div>
                                 </div>
                                 <div class="form-group row">
