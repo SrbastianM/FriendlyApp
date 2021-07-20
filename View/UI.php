@@ -67,7 +67,9 @@ include("../includes/db.php");
 
                             ?>
                         </li>
-                        <li class="list-group-item">Stay Happy</li>
+                        <a name="exit" href="./login.php">
+                            <li class="list-group-item">Stay Happy</li>
+                        </a>
                     </ul>
                 </div>
             </div>

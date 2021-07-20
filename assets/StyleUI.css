@@ -2,7 +2,9 @@
         body {
             background-image: url("/Img/background.jpg");
         }
-
+        .buttonDark{
+            margin-top: 1rem;
+        }
         .h7 {
             font-size: 0.8rem;
         }
