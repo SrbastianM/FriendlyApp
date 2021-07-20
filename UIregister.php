@@ -42,31 +42,31 @@ include("includes/register.php");
                                 <div class="form-group row">
                                     <label for="" class="col-md-4 col-form-label text-md-right"> Full Name :</label>
                                     <div class="col-md-8 ">
-                                        <input type="text" class="form-control" name="name" placeholder="Full name">
+                                        <input type="text" class="form-control" name="name" placeholder="Full name" require>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="" class="col-md-4 col-form-label text-md-right"> Phone Number:</label>
                                     <div class="col-md-8 ">
-                                        <input type="number" class="form-control" name="phone" placeholder="Phone Number">
+                                        <input type="number" class="form-control" name="phone" placeholder="Phone Number" require>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="" class="col-md-4 col-form-label text-md-right">Citizenship Card :</label>
                                     <div class="col-md-8 ">
-                                        <input type="number" class="form-control" name="citizenshipcard" placeholder="Citizenship Card">
+                                        <input type="number" class="form-control" name="citizenshipcard" placeholder="Citizenship Card" require>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="" class="col-md-4 col-form-label text-md-right"> E-mail Address :</label>
                                     <div class="col-md-8 ">
-                                        <input type="text" class="form-control" name="email" placeholder="E-mail Address">
+                                        <input type="text" class="form-control" name="email" placeholder="E-mail Address" require>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="" class="col-md-4 col-form-label text-md-right"> Password :</label>
                                     <div class="col-md-8 ">
-                                        <input type="password" class="form-control" name="password" placeholder="Password">
+                                        <input type="password" class="form-control" name="password" placeholder="Password" require>
                                     </div>
                                 </div>
                                 <div class="d-grid gap-2">

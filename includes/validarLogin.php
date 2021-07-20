@@ -1,8 +1,11 @@
 <?php
 include('db.php');
 
+session_start();
 
-if (isset($_POST["email"]) and isset($_POST["password"])) {
+$time = "";
+
+if (isset($_POST["submitLogin"])) {
     $user = $_POST["email"];
     $contraseña = md5($_POST["password"]);
 
@@ -12,10 +15,6 @@ if (isset($_POST["email"]) and isset($_POST["password"])) {
     if (mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
         //se para en row y pide que imprima de la primera fila de cada campo
-        session_name("LoginUsuario");
-        session_start();
-        $_SESSION['id_usuario'] = $row['id'];
-        $_SESSION["UltimoAcceso"] = date("Y-n-j H:i:s");
         header("location:../View/UI.php");
     } else {
         header("Location:../login.php");

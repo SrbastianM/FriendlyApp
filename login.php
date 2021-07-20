@@ -24,7 +24,7 @@ include("includes/validarLogin.php");
                         <label>Password</label>
                         <input name="password" type="password" class="form-control" placeholder="Password">
                     </div>
-                    <button id="login-button" type="submit" class="btn btn-black">Login</button>
+                    <button name="submitLogin" id="login-button" type="submit" class="btn btn-black">Login</button>
                     <a href="UIregister.php"> Register</a>
                 </form>
             </div>
