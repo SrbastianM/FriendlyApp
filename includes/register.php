@@ -16,40 +16,43 @@ if ($validacion = true) {
           $password = md5($_POST['password']);
           //validacion de la consulta Literalmente esta pidiendo qeu no tenga campos vacios
           if (empty($name)) {
-               die("<p> Enter a valid Name</p>");
+               die("<a href = '../UIregister.php'><p> Enter a valid Name</p></a>");
           };
           if (empty($phone)) {
-               die("<p> Enter a valid Phone</p>");
+               die("<a href = '../UIregister.php'><p> Enter a valid Phone</p></a>");
           };
           if (empty($card)) {
-               die("<p> Enter a valid Citizenshipcard</p>");
+               die("<a href = '../UIregister.php'><p> Enter a valid Card</p></a>");
           };
           if (empty($email)) {
-               die("<p> Enter a valid Email</p>");
+               die("<a href = '../UIregister.php'><p> Enter a valid email</p></a>");
           } else {
                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                    die("<p> The Email is Ivalid</p>");
+                    die("<a href = '../UIregister.php'><p> Enter a valid Email</p></a>");
                };
           }
           if (empty($password)) {
-               die("<p> Enter a valid Password</p>");
+               die("<a href = '../UIregister.php'><p> Enter a valid Password</p></a>");
           };
+          if ($validacion = true) {
+               $registerUser = true;
+          }
+          //     // Insertar dentro de las columnas, la informacion que llegue respectiva a sus variables
+          if ($registerUser = True) {
+               $query = "INSERT INTO `tbl_users`(`name`, `phone`, `citizenshipcard`, `email`, `password`)
+          VALUES ('$name','$phone','$card','$email','$password')";
+               //     //Consulta 
+               $result = mysqli_query($conn, $query);
+               if ($query = true) {
+                    echo "User Saved";
+               }
+               if (!$result) {
+                    die('Holly molly thts sounds bad');
+               }
+          }
      } else {
           $validacion = false;
      }
-
-
-     //     // Insertar dentro de las columnas, la informacion que llegue respectiva a sus variables
-     if ($registerUser = True) {
-          $query = "INSERT INTO `tbl_users`(`name`, `phone`, `citizenshipcard`, `email`, `password`)
-          VALUES ('$name','$phone','$card','$email','$password')";
-          //     //Consulta 
-          $result = mysqli_query($conn, $query);
-          if (!$result) {
-               die('Holly molly thts sounds bad');
-          }
-     }
 }
-
 
 mysqli_close($conn);
