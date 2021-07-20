@@ -1,23 +1,27 @@
-<?php 
+<?php
+include('db.php');
 
-if(isset($_POST["Usuario"]) and isset($_POST["Contraseña"])){
-    echo $_POST["Usuario"];
-    echo $_POST["Contraseña"];
-$user = $_POST["Usuario"];
-$contraseña = $_POST["Contraseña"];
+session_start();
 
-    $sql = "SELECT * FROM tblusuario WHERE Usuario ='".$user."' AND Contrasena = '$contraseña'";
-    $result = mysqli_query($conn, $sql);
+$time = "";
+$UserLogin = "";
+if ($UserLogin = True) {
 
-    if (mysqli_num_rows($result) > 0) {
-    //se para en row y pide que imprima de la primera fila de cada campo
-    header("location:index.php");
-    } 
+    if (isset($_POST["submitLogin"])) {
+        $user = $_POST["email"];
+        $contraseña = md5($_POST["password"]);
+        $sql = "SELECT * FROM tbl_users WHERE email ='$user' AND password = '$contraseña'";
+        $result = mysqli_query($conn, $sql);
 
-    mysqli_close($conn);
+        if (mysqli_num_rows($result) > 0) {
+            $row = mysqli_fetch_assoc($result);
+            //se para en row y pide que imprima de la primera fila de cada campo
+            header("location:../View/UI.php");
+        } else {
+            header("Location:../login.php");
+            echo "Usuario y/o contraseña no validos";
+        }
+
+        mysqli_close($conn);
+    }
 }
-
-
-
-// $User el user que se 
-?>
