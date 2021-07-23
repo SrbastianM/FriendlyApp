@@ -27,10 +27,11 @@ include("../includes/db.php");
             <div class="col-md-3">
                 <div class="card">
                     <div class="card-body">
-                        <div class="h5">@SebastianRodriguez</div>
-                        <div class="h7 text-muted">Fullname : @SebastianRodriguez</div>
-                        <div class="h7">Developer Web, Student and Depresed boy
-                            etc.
+                        <div class="h5"><?php
+                                        session_start();
+                                        echo '@' . $_SESSION['nick'];  ?></div>
+                        <div class="h7 text-muted"><?php echo $_SESSION['nombre']; ?></div>
+                        <div class="h7"> <?php echo $_SESSION['description']; ?>
                         </div>
                     </div>
                     <!-- FOLLOWERS COUNT -->
@@ -38,7 +39,6 @@ include("../includes/db.php");
                         <li class="list-group-item">
                             <div class="h6 text-muted">Followers</div>
                             <?php
-                            session_start();
                             $user = $_SESSION['id_usuario'];
                             $sql = "SELECT * FROM followers WHERE id_usuario ='$user' ";
                             $result = mysqli_query($conn, $sql);
@@ -88,45 +88,48 @@ include("../includes/db.php");
                             </li>
                         </ul>
                     </div>
-                    <!-- TEXT AREA -->
-                    <div class="card-body">
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
-                                <div class="form-group">
-                                    <label class="sr-only" for="message">post</label>
-                                    <textarea class="form-control" id="message" rows="3" placeholder="What are you thinking?"></textarea>
-                                </div>
+                    <form action="" method="POST">
 
+                        <!-- TEXT AREA -->
+                        <div class="card-body">
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="message">post</label>
+                                        <textarea class="form-control" id="message" rows="3" placeholder="What are you thinking?"></textarea>
+                                    </div>
+
+                                </div>
+                                <!-- SECCIÓN DE SUBIDA DE IMAGEN-->
+                                <div class="tab-pane fade" id="images" role="tabpanel" aria-labelledby="images-tab">
+                                    <div class="form-group">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="customFile">
+                                            <label class="custom-file-label" for="customFile">Upload image</label>
+                                        </div>
+                                    </div>
+                                    <div class="py-4"></div>
+                                </div>
                             </div>
-                            <!-- SECCIÓN DE SUBIDA DE IMAGEN-->
-                            <div class="tab-pane fade" id="images" role="tabpanel" aria-labelledby="images-tab">
-                                <div class="form-group">
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="customFile">
-                                        <label class="custom-file-label" for="customFile">Upload image</label>
+                            <!-- SHARE BUTTON -->
+                            <div class="btn-toolbar justify-content-between">
+                                <div class="btn-group">
+                                    <button type="submit" class="btn btn-primary">share</button>
+                                </div>
+                                <div class="btn-group">
+                                    <button id="btnGroupDrop1" type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-globe"></i>
+                                    </button>
+                                    <!-- PRIVACY BUTTON -->
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">
+                                        <a class="dropdown-item" href="#"><i class="fa fa-globe"></i> Public</a>
+                                        <a class="dropdown-item" href="#"><i class="fa fa-users"></i> Friends</a>
+                                        <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Just me</a>
                                     </div>
                                 </div>
-                                <div class="py-4"></div>
                             </div>
                         </div>
-                        <!-- SHARE BUTTON -->
-                        <div class="btn-toolbar justify-content-between">
-                            <div class="btn-group">
-                                <button type="submit" class="btn btn-primary">share</button>
-                            </div>
-                            <div class="btn-group">
-                                <button id="btnGroupDrop1" type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-globe"></i>
-                                </button>
-                                <!-- PRIVACY BUTTON -->
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">
-                                    <a class="dropdown-item" href="#"><i class="fa fa-globe"></i> Public</a>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-users"></i> Friends</a>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Just me</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </form>
                 </div>
                 <!-- Post /////-->
 

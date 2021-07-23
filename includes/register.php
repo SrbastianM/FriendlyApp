@@ -14,6 +14,8 @@ if ($validacion = true) {
           $card = $_POST['citizenshipcard'];
           $email = $_POST['email'];
           $password = md5($_POST['password']);
+          $nick = ($_POST['nickname']);
+
           //validacion de la consulta Literalmente esta pidiendo qeu no tenga campos vacios
           if (empty($name)) {
                die("<a href = '../UIregister.php'><p> Enter a valid Name</p></a>");
@@ -39,8 +41,8 @@ if ($validacion = true) {
           }
           //     // Insertar dentro de las columnas, la informacion que llegue respectiva a sus variables
           if ($registerUser = True) {
-               $query = "INSERT INTO `tbl_users`(`name`, `phone`, `citizenshipcard`, `email`, `password`)
-          VALUES ('$name','$phone','$card','$email','$password')";
+               $query = "INSERT INTO `tbl_users`(`name`, `phone`, `citizenshipcard`, `email`, `password`, `nickname`)
+          VALUES ('$name','$phone','$card','$email','$password', '$nick')";
                //     //Consulta 
                $result = mysqli_query($conn, $query);
                if ($query = true) {

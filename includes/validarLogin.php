@@ -15,6 +15,11 @@ if ($UserLogin = True) {
 
         if (mysqli_num_rows($result) > 0) {
             $row = mysqli_fetch_assoc($result);
+            $_SESSION["id_usuario"] = $row["id"];
+
+            $_SESSION['nombre'] = $row['name'];
+            $_SESSION['nick'] = $row['nickname'];
+            $_SESSION['description'] = $row['description'];
             //se para en row y pide que imprima de la primera fila de cada campo
             header("location:../View/UI.php");
         } else {
