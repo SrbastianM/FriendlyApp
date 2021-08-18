@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 
 
 $conn = mysqli_connect(
@@ -11,7 +10,7 @@ $conn = mysqli_connect(
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
-    }
+}
 
 // **IMPORTANTE**
     //CADDY SSD y EL DISCO DE ESTADO SOLIDO + 2 GB (dr3 1.333mhz)DE MEMORIA RAM
