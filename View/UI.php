@@ -1,7 +1,25 @@
 <?php
 include("../includes/header.php");
 include("../includes/db.php");
-
+session_start();
+if (isset($_POST["description"])) {
+    $description = $_POST["description"];
+    $id = $_SESSION["id_usuario"];
+    $sql = "UPDATE `tbl_users` SET `description`='$description' WHERE id = $id";
+    $result = mysqli_query($conn, $sql);
+    if ($result) {
+        if (mysqli_affected_rows($conn) > 0) {
+            $mensaje = "Se ha actualizado la descripcion";
+            $_SESSION["description"] = $_POST["description"];
+        } else {
+            $mensaje = "No se ha actualizado la descripcion";
+        }
+    } else {
+        $mensaje = "Error en la conexion ";
+    }
+}
+echo $mensaje;
+?>
 ?>
 
 <body>
@@ -28,7 +46,6 @@ include("../includes/db.php");
                 <div class="card">
                     <div class="card-body">
                         <div class="h5"><?php
-                                        session_start();
                                         echo '@' . $_SESSION['nick'];  ?></div>
                         <div class="h7 text-muted"><?php echo $_SESSION['nombre']; ?></div>
                         <div class="h7"> <?php echo $_SESSION['description']; ?>
@@ -67,9 +84,34 @@ include("../includes/db.php");
 
                             ?>
                         </li>
-                        <a name="exit" href="./login.php">
-                            <li class="list-group-item">Stay Happy</li>
-                        </a>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Edit
+                        </button>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <form action="#" method="POST">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Description Panel</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">Put your description here ! :)</span>
+                                                </div>
+                                                <textarea class="form-control" aria-label="With textarea" name="description"></textarea>
+                                            </div>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </ul>
                 </div>
             </div>
@@ -300,7 +342,7 @@ include("../includes/db.php");
                         <h6 class="card-subtitle mb-2 text-muted">New User @</h6>
                         <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus sunt quis praesentium libero architecto nobis, perferendis consequuntur ex veniam eum et, fuga repellat facere quasi non impedit cumque, exercitationem provident.
                             card's content.</p>
-                        <a href="#" class="card-link">Visit</a>
+                        <a name href="about.php" class="card-link">Visit</a>
                         <a href="#" class="card-link">Follow!</a>
                     </div>
                 </div>
@@ -310,11 +352,13 @@ include("../includes/db.php");
                         <h6 class="card-subtitle mb-2 text-muted">New User @</h6>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla fuga explicabo laborum velit excepturi, corrupti doloremque unde, consectetur expedita qui est eligendi iusto nobis nam iste minus aut, voluptatibus quibusdam!
                             card's content.</p>
-                        <a href="#" class="card-link">Visit</a>
-                        <a href="#" class="card-link">Follow</a>
+                        <a href="about.php" name="view" class="card-link">Visit</a>
+                        <a href="#" name="follow" class="card-link">Follow</a>
                     </div>
                 </div>
-            </div>
+
+            </div> <!-- Bueno, aquí va el formulario, NO LO PIERDAS DE VISTA -->
+
         </div>
     </div>
 
