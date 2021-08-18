@@ -46,9 +46,9 @@ include("includes/register.php");
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="" class="col-md-4 col-form-label text-md-right"> Full Name :</label>
+                                    <label for="" class="col-md-4 col-form-label text-md-right"> Nickname :</label>
                                     <div class="col-md-8 ">
-                                        <input type="text" class="form-control" name="name" placeholder="Full name" required>
+                                        <input type="text" class="form-control" name="nick" placeholder="Nickname" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
