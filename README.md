@@ -1,6 +1,6 @@
 # Welcome to Friendly App!
 
-Hi! I'm Sebastian  **The project developer**. This my first proyect long and I hope you like it. . I don't have many things, to say about me, so I'll just say follow me on [instagram](%28https://www.instagram.com/d3epinmymind/%29) and [Twitter](https://twitter.com/TenkiOwO?s=08) U`s`U
+Hi! I'm Sebastian  **The project developer**. This my first proyect long and I hope you like it. . I don't have many things, to say about me, so I'll just say follow me on [instagram](https://www.instagram.com/d3epinmymind) and [Twitter](https://twitter.com/TenkiOwO?s=08) U`s`U
 
 
 # About the project
