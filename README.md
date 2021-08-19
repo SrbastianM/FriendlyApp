@@ -9,13 +9,12 @@ Friendly app arises as a group idea and its purpose is to become a social networ
 ## ScreenShots
 
 Well now I'm going to show a few screenshots of the application itself. 
-
+![Login](/assetsImg/Login.png)
 *Here I will put the screenshots, only I still don't know how to do it hahah sorry*
 
 
-## Switch to another file
-
-All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
+## Break Time 
+How u feel?
 
 ## The end of 
 Well this is the end, there is nothing more to clarify, I hope you like it.
