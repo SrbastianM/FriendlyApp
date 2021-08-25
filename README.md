@@ -9,7 +9,7 @@ Friendly app arises as a group idea and its purpose is to become a social networ
 ## ScreenShots
 
 Well now I'm going to show a few screenshots of the application itself. 
-![Login](/assetsImg/Login.png)
+![Login]("https://cdn.denox.es/includes/uploads/2012/06/Ejemplo-Portada-Final.jpg")
 *Here I will put the screenshots, only I still don't know how to do it hahah sorry*
 
 

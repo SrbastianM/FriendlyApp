@@ -10,11 +10,11 @@ if ($validacion = true) {
 
      if (isset($_POST["register"])) {
           $name = $_POST['name'];
+          $nick = ($_POST['nick']);
           $phone = $_POST['phone'];
           $card = $_POST['citizenshipcard'];
           $email = $_POST['email'];
           $password = md5($_POST['password']);
-          $nick = ($_POST['nickname']);
 
           //validacion de la consulta Literalmente esta pidiendo qeu no tenga campos vacios
           if (empty($name)) {
@@ -46,7 +46,7 @@ if ($validacion = true) {
                //     //Consulta 
                $result = mysqli_query($conn, $query);
                if ($query = true) {
-                    echo "User Saved";
+                    echo "<a href = '../login.php'><p> User Saved </p></a>";
                }
                if (!$result) {
                     die('Holly molly thts sounds bad');
