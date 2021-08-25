@@ -9,7 +9,7 @@ Friendly app arises as a group idea and its purpose is to become a social networ
 ## ScreenShots
 
 Well now I'm going to show a few screenshots of the application itself. 
-![Login]("https://i.pinimg.com/236x/ce/33/5a/ce335a0f95bf7d8609182a43129d35c6.jpg")
+![Login Page](https://i.pinimg.com/564x/ce/33/5a/ce335a0f95bf7d8609182a43129d35c6.jpg)
 *Here I will put the screenshots, only I still don't know how to do it hahah sorry*
 
 
